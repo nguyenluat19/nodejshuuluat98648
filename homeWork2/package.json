@@ -1,0 +1,14 @@
+{
+  "name": "system-info-package",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "home.js",
+  "scripts": {
+    "start": "node home.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Package hiển thị thông số máy tính"
+}

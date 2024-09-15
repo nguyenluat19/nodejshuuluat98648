@@ -1,0 +1,142 @@
+{
+  "platform": "win32",
+  "cpuArch": "x64",
+  "totalMemory": 16927596544,
+  "freeMemory": 7022542848,
+  "uptime": 4011.296,
+  "hostname": "Admin",
+  "cpus": [
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 81062,
+        "nice": 0,
+        "sys": 116234,
+        "idle": 3814000,
+        "irq": 6328
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 42765,
+        "nice": 0,
+        "sys": 36421,
+        "idle": 3931937,
+        "irq": 343
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 145250,
+        "nice": 0,
+        "sys": 145531,
+        "idle": 3720343,
+        "irq": 1515
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 47671,
+        "nice": 0,
+        "sys": 22046,
+        "idle": 3941406,
+        "irq": 187
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 76640,
+        "nice": 0,
+        "sys": 48515,
+        "idle": 3885968,
+        "irq": 421
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 31531,
+        "nice": 0,
+        "sys": 23250,
+        "idle": 3956343,
+        "irq": 171
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 62812,
+        "nice": 0,
+        "sys": 36812,
+        "idle": 3911500,
+        "irq": 453
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 38765,
+        "nice": 0,
+        "sys": 29015,
+        "idle": 3943343,
+        "irq": 203
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 86421,
+        "nice": 0,
+        "sys": 73734,
+        "idle": 3850968,
+        "irq": 1796
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 34015,
+        "nice": 0,
+        "sys": 27890,
+        "idle": 3949218,
+        "irq": 281
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 65406,
+        "nice": 0,
+        "sys": 38109,
+        "idle": 3907609,
+        "irq": 390
+      }
+    },
+    {
+      "model": "Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz",
+      "speed": 2592,
+      "times": {
+        "user": 39484,
+        "nice": 0,
+        "sys": 40281,
+        "idle": 3931359,
+        "irq": 328
+      }
+    }
+  ]
+}
