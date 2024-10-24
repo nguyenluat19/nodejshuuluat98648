@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+            background-color: #f7f7f7;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 700px;
+        }
+        .login-container #username {
+            width: 99%;
+            height: 40px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-container #password {
+            width: 99%;
+          height: 40px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-container .login {
+            width: 100%;
+            padding: 10px;
+            background-color: #38883b;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+        .error-message {
+            color: red;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .row{
+            display: flex;
+            margin-top: 10px;
+        }
+        .row-footer{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .row-footer button{
+            width: 100px;
+            height: 40px;
+            background-color: rgb(179, 51, 51);
+            color: white;
+            border: none;
+        }
+        .footer-pass{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="img">
+            <img style="width: 200px; height: 200px; " src="https://cdn.vectorstock.com/i/500p/53/42/user-member-avatar-face-profile-icon-vector-22965342.jpg" alt="">
+
+        </div>
+        <% if (errorMessage) { %>
+            <p class="error-message"><%= errorMessage %></p>
+        <% } %>
+        <form action="/login" method="POST">
+            <label for="username" style="font-weight: bold;">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password" style="font-weight: bold;">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button class="login" type="submit">Login</button>
+            <div class="row">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>    
+            </div>
+            <div class="row-footer">
+                <button>Cancel</button>
+
+                <div class="footer-pass">
+                    <p>Forgot</p>
+                    <a href="">password</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

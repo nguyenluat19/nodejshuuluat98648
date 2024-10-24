@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu biển số xe</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        select {
+            margin: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Creating a server with Node.js</h1>
+    <p>Hello, I'm a Node.js server for searching vehicle plate number!</p>
+    
+    <form action="/vehicle/getPlate" method="POST">
+        <select name="city" id="city">
+            <% vehicleData.forEach(item => { %>
+                <option value="<%= item.city %>" <%= selectedCity === item.city ? 'selected' : '' %>><%= item.city %></option>
+            <% }) %>
+        </select>
+        <button type="submit">Tra cứu</button>
+    </form>
+
+    <% if (selectedCity) { %>
+        <p>Biển số xe: <%= plateNumber %></p>
+    <% } %>
+</body>
+</html>
