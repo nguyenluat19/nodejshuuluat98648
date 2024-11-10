@@ -1,0 +1,15 @@
+<%- include('layouts/header'); %>
+<main>
+    <form action method="get">
+        <select name="city">
+            <% data.forEach((item, index)=>{ %>
+            <option value="<%= index %>"><%= item.city %></option>
+            <% }) %>
+
+        </select>
+        <button>Search</button>
+    </form>
+    <h2><%= plate_no %></h2>
+    <h1>Home Page</h1>
+</main>
+<%- include('layouts/footer'); %>
