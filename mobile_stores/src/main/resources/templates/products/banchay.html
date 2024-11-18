@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/banchay.css">
+    <title>Home</title>
+</head>
+<style>
+    html {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="header" id="sticky-header">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand me-5" href="" style="font-weight: bold; font-size: 30px;"><a class="navbar-brand me-5" href="/" style="font-weight: bold; font-size: 30px;"><img src="/images/logo.jpg" style="width: 50px; height: 50px;"></a></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
+
+                        <li class="nav-item d-flex  ms-2 me-1">
+                            <a class="nav-link active" href="">
+                                <i class="fa-solid fa-house"></i>
+
+                            </a>
+                            <a href="/" style="text-decoration: none; color: black;" class="mb-2">Trang chủ</a>
+                        </li>
+                        <li class="nav-item d-flex  ms-2 me-1">
+                            <a class="nav-link active me-1" href="">
+                                <i class="fa-regular fa-newspaper"></i>
+                            </a>
+                            <p class="mb-2">Bán chạy</p>
+                        </li>
+                        <li class=" nav-item dropdown ms-3 mt-2 me-2">
+                            <a>
+                                <i class="fa-solid fa-certificate"></i>
+                            </a>
+                            <p class="nav-link dropdown-toggle active " href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Bảo hành</p>
+                            <ul class="dropdown-menu ms-3">
+                                <li><a class="dropdown-item" href="">Chính sách bảo hành</a>
+                                </li>
+                                <li><a class="dropdown-item" href="">Bảo hành vàng</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="">Bảo hành lỗi</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item d-flex  ms-2">
+                            <a class="nav-link active" href="#">
+                                <i class="fa-regular fa-address-book me-1"></i>
+
+                            </a>
+                            <a href="" style="color: black; text-decoration: none;" class="mb-2">Liên hệ</a>
+                        </li>
+                        <form class="d-flex form-inline me-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Nhập tên sản phẩm..."
+                                aria-label="Search" onkeyup="filterFunction()">
+                            <button class="btn btn-outline-success" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                        <li class="nav-item d-flex  ms-2">
+                            <a class="nav-link active" href="/admin">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+
+                            <p onclick="document.getElementById('modalId').style.display='block'" class="aa">Tài khoản
+                            </p>
+
+                            <!-- login -->
+                            <div id="modalId" class="bb">
+                                <form class="cc dd" action="/action_page.php" method="post">
+                                    <div class="ee">
+                                        <span onclick="document.getElementById('modalId').style.display='none'"
+                                            class="ff" title="Close Modal">&times;</span>
+                                        <img style="width: 200px; height: 200px;"
+                                            src="https://e7.pngegg.com/pngimages/705/224/png-clipart-user-computer-icons-avatar-miscellaneous-heroes.png"
+                                            alt="Avatar" class="gg">
+                                    </div>
+
+                                    <div class="hh">
+                                        <label><b>Tên tài khoản</b></label>
+                                        <input class="ii" type="text" placeholder="Số di động hoặc email" name="uname"
+                                            required>
+
+                                        <label><b>Mật khẩu</b></label>
+                                        <input class="ii" type="password" placeholder="Nhập mật khẩu" name="psw"
+                                            required>
+
+                                        <button type="submit" class="ab">Đăng nhập</button>
+                                        <label>
+                                            <input type="checkbox" checked="checked" name="remember"> Lưu tài khoản này
+                                        </label>
+                                    </div>
+
+                                    <div class="hh" style="background-color:#f1f1f1">
+                                        <button type="button"
+                                            onclick="document.getElementById('modalId').style.display='none'" class="jj"
+                                            style="color: white;"> Hủy quá trình</button>
+                                        <!-- Logout -->
+
+                                        <span class="kk">
+                                            <a onclick="document.getElementById('id01').style.display='block'"
+                                                class="signup-a" style="width:auto; text-decoration: none;"> Đăng kí tài
+                                                khoản <i class="fa-solid fa-arrow-right-long"></i></a>
+
+                                            <div id="id01" class="signup-b">
+                                                <span onclick="document.getElementById('id01').style.display='none'"
+                                                    class="signup-c" title="Close Modal">&times;</span>
+                                                <form class="signup-d signup-e" action="/action_page.php">
+                                                    <div class="signup-f">
+                                                        <h1>Đăng kí</h1>
+                                                        <p>Vui lòng điền vào mẫu này để tạo tài khoản.</p>
+                                                        <hr class="signup-g">
+                                                        <label><b>Email</b></label>
+                                                        <input class="signup-h" type="text" placeholder="Enter Email"
+                                                            name="email" required>
+
+                                                        <label><b>Mật khẩu</b></label>
+                                                        <input class="signup-h" type="password"
+                                                            placeholder="Enter Password" name="psw" required>
+
+                                                        <label><b>Nhập lại mật khẩu</b></label>
+                                                        <input class="signup-h" type="password"
+                                                            placeholder="Repeat Password" name="psw-repeat" required>
+
+                                                        <label>
+                                                            <input type="checkbox" checked="checked" name="remember"
+                                                                style="margin-bottom:15px"> Lưu
+                                                            tài khoản này
+                                                        </label>
+
+                                                        <p>By creating an account you agree to our <a href="#"
+                                                                style="color:dodgerblue">Terms &
+                                                                Privacy</a>.</p>
+
+                                                        <div class="signup-i clearfix">
+                                                            <button type="button"
+                                                                onclick="document.getElementById('id01').style.display='none'"
+                                                                class="signup-j">Cancel</button>
+                                                            <button type="submit" class="signup-k">Đăng nhập</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </li>
+                        <li class="nav-item d-flex ms-2">
+                            <a class="nav-link active" href="">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                            <a href="/showcart" class="mb-2" style="color: black; text-decoration: none;">Giỏ hàng <span
+                                    id="cart-count" class="badge bg-danger ms-1">0</span></a>
+
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <br>
+
+
+
+    <br><br>
+    <div class="container">
+        <h2 class="sanphamhot"> CÁC SẢN PHẨM BEST SELLER THÁNG 11</h2>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="container-flex">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-3 mt-3" th:each="product, iterStat : ${products}">
+                <div class="card" style="width: 100%;">
+                    <p class="position" th:text="${product.tragop}"></p>
+                    <img th:src="@{'/images/imageProducts/' + ${product.image}}" class="card-img-top" alt="..."
+                        style="width: 80%; text-align: center; margin-left: 30px; margin-top: 20px;">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${product.name}"></h5>
+                        <div class="row align-items-center">
+                            <p class="col" th:text="${product.prices + '$'}"
+                                style="margin: 0;font-weight: bold; color: red;"></p>
+                            <p class="col" th:text="${product.pricesgoc + '$'}"
+                                style="margin: 0; text-decoration: line-through;"></p>
+                        </div>
+                        <div class="row align-items-center">
+                            <p class="col text-start d-flex justify-content-center align-items-center"
+                                style="margin: 0;">🦸‍♂️👲 👉
+                            </p>
+                            <p class="col text-end" th:text="${product.danhgia}" style="margin: 0; color: #FFD700;"></p>
+                        </div>
+                        <a th:href="@{'/xemthem/' + ${product.id}}" class="btn btn-primary mt-2">Xem thêm</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo"><strong style="color: red;">Some</strong> <strong>thing</strong></h1>
+
+            <h2>Contact</h2>
+
+            <address>
+                5534 Somewhere In. The World 22193-10212<br>
+
+                <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+            </address>
+        </div>
+
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">Media</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Online</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Print</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Alternative Ads</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Technology</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="#">Hardware Design</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Software Design</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Digital Signage</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Automation</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Artificial Intelligence</a>
+                    </li>
+
+                    <li>
+                        <a href="#">IoT</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Terms of Use</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sitemap</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="legal">
+            <p>&copy; 2019 Something. All rights reserved.</p>
+
+            <div class="legal__links">
+                <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</html>
