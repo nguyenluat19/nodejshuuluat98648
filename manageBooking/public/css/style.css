@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+td.pending {
+    background-color: yellow;
+}
+
+td.confirmed {
+    background-color: lightgreen;
+}
+
+td.cancelled {
+    background-color: red;
+    color: white;
+}

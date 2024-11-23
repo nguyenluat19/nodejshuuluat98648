@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách đặt chỗ</title>
+    <style>
+      /* Các style đã có */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      td {
+        background-color: #f9f9f9;
+      }
+
+      button {
+        padding: 5px 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background-color: #d32f2f;
+      }
+
+      .edit-button {
+        background-color: #4caf50; /* Màu xanh lá cho nút sửa */
+      }
+
+      .edit-button:hover {
+        background-color: #388e3c; /* Hover màu xanh đậm */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Danh sách đặt chỗ</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tên khách hàng</th>
+          <th>Ngày</th>
+          <th>Giờ</th>
+          <th>Trạng thái</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% bookings.forEach((booking) => { %>
+        <tr>
+          <td><%= booking.id %></td>
+          <td><%= booking.customerName %></td>
+          <td><%= booking.date %></td>
+          <td><%= booking.time %></td>
+          <td
+            style="color: 
+                <%= booking.status === 'Pending' ? 'orange' : 
+                     booking.status === 'Confirmed' ? 'green' : 'red' %>;"
+          >
+            <%= booking.status %>
+          </td>
+          <td>
+            <!-- Nút sửa -->
+            <a href="/bookings/edit/<%= booking.id %>">
+              <button class="edit-button">Sửa</button>
+            </a>
+            <!-- Nút hủy -->
+            <form
+              action="/bookings/cancel/<%= booking.id %>"
+              method="POST"
+              style="display: inline"
+            >
+              <button type="submit">Hủy</button>
+            </form>
+            <form
+              action="/bookings/delete/<%= booking.id %>"
+              method="POST"
+              style="display: inline"
+            >
+              <form
+                action="/bookings/delete/<%= booking.id %>"
+                method="POST"
+                onsubmit="return confirm('Bạn có chắc chắn muốn xóa không?')"
+              >
+                <button type="submit">Xóa</button>
+              </form>
+            </form>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <br />
+    <a href="/new">Thêm đặt chỗ mới</a>
+  </body>
+</html>
